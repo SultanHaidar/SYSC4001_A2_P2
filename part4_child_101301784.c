@@ -48,7 +48,7 @@ int main() {
         
 
         if (shared_mem->counter > 500) {
-            printf("Child: Counter reached %d, so exit\n", shared_mem->counter);
+            printf("Counter reached %d, so exit\n", shared_mem->counter);
             break;
         }
     }
