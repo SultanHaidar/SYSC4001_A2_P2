@@ -92,7 +92,7 @@ int main() {
         exit(1);
     } else {
     
-        printf("Parent %d: Created child, with PID %d\n", getpid(), child_pid);
+        printf("Parent %d; Created a child, with PID %d\n", getpid(), child_pid);
 
         
 
@@ -106,10 +106,10 @@ int main() {
             
 
             if (current_count % current_multiple == 0) {
-                printf("Parent: Count = %d - %d is multiple of %d\n", 
+                printf("Parent count = %d - %d is multiple of %d\n", 
                        current_count, current_count, current_multiple);
             } else {
-                printf("Parent: Count = %d\n", current_count);
+                printf("Parent count = %d\n", current_count);
             }
             
             usleep(150000); 
@@ -130,7 +130,7 @@ int main() {
         shmctl(shared_mem_id, IPC_RMID, NULL);
         semctl(semaphore_id, 0, IPC_RMID);
         
-        printf("Parent done!\n");
+        printf("Parent done\n");
     }
     
     return 0;
