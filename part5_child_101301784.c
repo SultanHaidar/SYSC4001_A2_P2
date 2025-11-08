@@ -30,7 +30,7 @@ int main() {
     int semaphore_id;
     struct shared_data *shared_mem;
     
-    printf("Child program is starting with semaphores; PID = %d\n", getpid());
+    printf("Child program is starting ; PID = %d\n", getpid());
 
     shared_mem_id = shmget(memory_key, sizeof(struct shared_data), 0666);
     if (shared_mem_id < 0) {
@@ -76,7 +76,7 @@ int main() {
         int current_multiple = shared_mem->multiple;
         semaphore_operation(semaphore_id, 1);
         
-        printf("Child: Multiple = %d, Counter = %d\n", 
+        printf("Child ,multiple = %d, Counter = %d\n", 
                current_multiple, current_counter);
         
         usleep(200000); 
