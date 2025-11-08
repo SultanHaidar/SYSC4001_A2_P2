@@ -54,7 +54,7 @@ int main() {
         exit(1);
     } else {
 
-        printf("Parent %d: now child with PID %d\n", getpid(), child_pid);
+        printf("Parent %d now child with PID %d\n", getpid(), child_pid);
         printf("Parent counting up \n");
         
 
@@ -64,17 +64,17 @@ int main() {
             int current_multiple = shared_mem->multiple;
             
             if (current_count % current_multiple == 0) {
-                printf("Parent: Count = %d - %d is multiple of %d\n", 
+                printf("Paren ;count = %d - %d is multiple of %d\n", 
                        current_count, current_count, current_multiple);
             } else {
-                printf("Parent: Count = %d\n", current_count);
+                printf("Parent Count = %d\n", current_count);
             }
             
             usleep(150000); 
             
 
             if (current_count > 500) {
-                printf("Parent Reached %d, stopping now\n", current_count);
+                printf("Parent reached %d, stopping now\n", current_count);
                 break;
             }
         }
