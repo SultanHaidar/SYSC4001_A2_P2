@@ -28,7 +28,7 @@ int main() {
             exit(1);
         }
     } else {
-        // This is the parent process
+      
         printf("Parent %d: create child with PID %d\n", getpid(), child_pid);
         printf("Parent waiting\n");
         
